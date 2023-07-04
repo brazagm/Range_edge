@@ -1,0 +1,93 @@
+###########################################################################
+##
+## DESCRIPTION OF COLUMNS AND VALUES IN data_morphology.csv
+##
+## This dataframe contains all morphological information needed
+## for the analyses. Specimen information and morphological measures
+## were collected by Alan G. Braz and a more detailed desciption on
+## methods are available in the published article (http://doi.wiley.com/10.1111/jbi.14687)
+##
+## Observations:
+##    (1) some unnecessary columns for this project were removed
+##        from the original dataframe;
+##    (2) only specimens with linear measures taken from the skull
+##        are registered;
+##    (3) empty cells must be considered as NA values. Empty cells were
+##        used in cases of missing information or measures that could not
+##        be taken. Scripts in this project are already prepared to work
+##        with this empty cells;
+##    (4) column names and values are in Brazilian portuguese
+##
+###########################################################################
+## Column description...
+id = unique collection identifier for the specimen
+museu = museum in which the specimen is deposited (i.e., Museu Nacional (MNHN); Museu de Zoologia da Universidade de São Paulo (MZUSP); Coleção Zoológica do Centro de Coleções Taxonômicas da Universidade Federal de Minas Gerais (UFMG); Coleção de Mamíferos da Universidade Federal do Espírito Santo (UFES); Museu de Ciências Naturais da Pontifícia Universidade Católica de Minas Gerais (PUC-Minas); Laboratório de Vertebrados from the Universidade Federal do Rio de Janeiro (labvert))
+sp = species' name
+pop = population in which the specimen is grouped
+coletor = collector (researcher or research project)
+localidade = locality where the specimen was collected
+uf = state or province
+lon = longitude coordinate in decimal degrees (WGS84)
+lat = latitude coordinate in decimal degrees (WGS84)
+alt = elevation in meters
+xy.original = if original geographic coordinates are given in lon/lat columns
+ano = year
+mes = month
+dia = day
+sexo = sex (male/female)
+dentes = tooth eruption for the specimen
+classe = age class following Tribe (1990) Dental age classes in Marmosa incana and other didelphoids. J Mammal. 71(4):566-569.
+idade = if specimen is adult, subadult or juvenile according to age class
+peso.morto = dead weight in grams 
+gls = great length of the skull in milimeters (mm)
+cb = condylobasal length (mm)
+nas = length of nasal (mm)
+bbc = breadth of brain case (mm)
+zb = zygomatic breadth (mm)
+poc = postorbital constriction (mm)
+ic = interorbital constriction (mm)
+lbasi = cranial base width (mm)
+bps = breadth of palatal shelf (mm)
+bam = breadth across molars (mm)
+can = breadth acorss canines (mm)
+pl = palatal length (mm)
+max = length of maxillary toothrow (mm)
+sm = length of lower molar serires (mm)
+mad = length of mandible (mm)
+alpcor = height of coronoid process (mm)
+larcon = width of mandibular condile (mm)
+obs = additional observations
+replicas = if linear measures were replicated for measurement errors estimates
+gls.1, cb.1, nas.1 ... larcon.4 = replicated measures for each skull trait  (mm)
+
+
+
+##########################################################################
+##
+## DESCRIPTION OF COLUMNS AND VALUES IN data_records.csv
+##
+## This dataframe contains all occurrence records needed
+## for the analyses. Occurrence information and coordinates review
+## were performed by Alan G. Braz and Marcos S. L. Figueiredo.
+## A more detailed desciption on methods are available in the published
+## article (http://doi.wiley.com/10.1111/jbi.14687)
+##
+## Observations:
+##    (1) some unnecessary columns for this project were removed
+##        from the original dataframe;
+##    (2) empty cells must be considered as NA values. Empty cells were
+##        used in cases of missing information. Scripts in this project
+##        are already prepared to work with this empty cells
+##
+###########################################################################
+## Column description...
+id = unique identifier for the record
+source = origin database
+locality = locality where the occurrence was recorded
+lon = longitude coordinate in decimal degrees (WGS84)
+lat = latitude coordinate in decimal degrees (WGS84)
+valid_georef = if the record is valid for the study analyses. Please see the criteria in the published article
+year = year of the records
+catalong = collection identifier for records derived from deposited specimens in museums
+recorded_by = author(s) or publication(s) responsible for the record
+obs = additional observations
